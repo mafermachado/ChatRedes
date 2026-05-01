@@ -15,7 +15,7 @@ def connect_server(host: str, port: int):
 
 if __name__=='__main__':
 
-    HOST = '192.168.18.17'
+    HOST = '192.168.0.43'
     PORT = 8000
 
     connect_server(HOST,PORT)

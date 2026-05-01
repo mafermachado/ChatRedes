@@ -10,13 +10,18 @@ def  start_server(host: str, port: int):
 
     client_socket, addr = server_socket.accept()
     nome = client_socket.recv(1024).decode('utf-8')
-
+    total = []
     while True:
         data = client_socket.recv(1024).decode('utf-8')
+        total.append(data)
         print(f'{addr} - {nome}: {data}')
+        print(f'Clientes conectados : {total}')
+
+
+   
 
 if __name__=='__main__':
-    HOST = '192.168.18.17'
+    HOST = '192.168.0.43'
     PORT = 8000
 
     start_server(HOST, PORT)
